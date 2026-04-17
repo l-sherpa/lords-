@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Programs from './components/Programs';
 import Facilities from './components/Facilities';
+import Gallery from './components/Gallery';
 import Achievements from './components/Achievements';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
@@ -42,6 +43,7 @@ export default function App() {
       <About />
       <Programs />
       <Facilities />
+      <Gallery />
       <Achievements />
       <Testimonials />
       <Contact />

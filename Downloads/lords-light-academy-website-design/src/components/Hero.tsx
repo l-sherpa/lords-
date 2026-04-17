@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ChevronDown, BookOpen, Star, Award } from 'lucide-react';
+import { BookOpen, Star, Award } from 'lucide-react';
 
 const stats = [
   { value: '750+', label: 'Students', icon: '🎓' },
@@ -219,7 +219,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
-          className="grid grid-cols-3 gap-4 max-w-2xl mx-auto"
+          className="grid grid-cols-3 gap-3 max-w-xl mx-auto mb-16"
         >
           {stats.map((stat, i) => (
             <motion.div
@@ -227,32 +227,16 @@ export default function Hero() {
               initial={{ opacity: 0, scale: 0.7 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 1 + i * 0.15, type: 'spring', bounce: 0.4 }}
-              className="bg-white/95 backdrop-blur-md rounded-2xl py-5 px-3 shadow-xl border border-white/50"
+              className="bg-white/80 backdrop-blur-sm rounded-xl py-3 px-2 border-2 border-white shadow-lg"
             >
-              <div className="text-3xl mb-1">{stat.icon}</div>
-              <div className="text-2xl md:text-3xl font-bold text-[#1a3a8a]">{stat.value}</div>
-              <div className="text-gray-600 text-sm mt-1 font-semibold leading-tight">{stat.label}</div>
+              <div className="text-2xl mb-0.5">{stat.icon}</div>
+              <div className="text-xl md:text-2xl font-bold text-[#1a3a8a] drop-shadow-sm">{stat.value}</div>
+              <div className="text-[#1a3a8a]/80 text-xs mt-0.5 font-semibold leading-tight">{stat.label}</div>
             </motion.div>
           ))}
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
-      <motion.a
-        href="#about"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
-        className="absolute bottom-28 left-1/2 -translate-x-1/2 flex flex-col items-center text-white/50 hover:text-white/80 transition-colors"
-      >
-        <span className="text-xs mb-2 tracking-widest uppercase">Scroll</span>
-        <motion.div
-          animate={{ y: [0, 6, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-        >
-          <ChevronDown size={22} />
-        </motion.div>
-      </motion.a>
     </section>
   );
 }

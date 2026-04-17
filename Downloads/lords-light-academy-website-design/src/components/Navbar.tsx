@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Sun } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const navLinks = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
   { label: 'Programs', href: '#programs' },
   { label: 'Facilities', href: '#facilities' },
+  { label: 'Gallery', href: '#gallery' },
   { label: 'Achievements', href: '#achievements' },
   { label: 'Contact', href: '#contact' },
 ];
@@ -40,11 +41,12 @@ export default function Navbar() {
             className="flex items-center gap-3 group"
             whileHover={{ scale: 1.03 }}
           >
-            <div className="relative w-12 h-12 flex items-center justify-center">
-              {/* Sun icon as logo placeholder */}
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#2756c5] to-[#1a3a8a] flex items-center justify-center shadow-lg">
-                <Sun className="w-7 h-7 text-[#f5c518] animate-sun-pulse" />
-              </div>
+            <div className="relative w-14 h-14 flex items-center justify-center">
+              <img
+                src="/lords-logo.png"
+                alt="Lord's Light Academy"
+                className="w-full h-full object-contain drop-shadow-lg"
+              />
             </div>
             <div className="flex flex-col leading-tight">
               <span

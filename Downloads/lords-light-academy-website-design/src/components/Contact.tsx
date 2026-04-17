@@ -134,10 +134,10 @@ export default function Contact() {
                 Conveniently located in Boudha-Jorpati area, easily accessible from all parts of Kathmandu.
               </p>
               <a
-                href="https://maps.google.com/?q=Gokarneshwor-6,Nayabasti,Kathmandu,Nepal"
+                href="https://maps.google.com/maps?q=Lord's+Light+Academy+Kathmandu+Nepal"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#f5c518] text-[#1a3a8a] font-bold text-sm px-5 py-2.5 rounded-full hover:bg-[#f0a500] transition-colors"
+                className="inline-flex items-center gap-2 bg-[#f5c518] text-[#1a3a8a] font-bold text-sm px-5 py-2.5 rounded-full hover:bg-[#f0a500] transition-colors cursor-pointer"
               >
                 <MapPin size={14} />
                 View on Google Maps
